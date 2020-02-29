@@ -10,6 +10,10 @@ class Post(models.Model):
     publication_date = models.DateTimeField(default=timezone.now)
     category = models.ForeignKey('Category', on_delete = models.CASCADE, null = True)
 
+    class Meta:
+        verbose_name = 'Публикация'
+        verbose_name_plural = 'Публикации'
+
 class Category(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField
