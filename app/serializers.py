@@ -19,8 +19,6 @@ class PostSerializer(serializers.ModelSerializer):
 
 class CategorySerializer(serializers.ModelSerializer):
 
-    posts = serializers.StringRelatedField(many=True)
-
     class Meta:
         model = Category
         fields = ['name', 'slug', 'posts']
